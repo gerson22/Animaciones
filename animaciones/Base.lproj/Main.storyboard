@@ -1,24 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="animaciones" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94X-9v-faf">
+                                <rect key="frame" x="41.5" y="403" width="331" height="90"/>
+                                <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="BOUNCE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="bounce:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g8C-VH-V8X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAk-i1-oK8">
+                                <rect key="frame" x="41.5" y="273.5" width="331" height="89.5"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="JUMP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="jump:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A6w-sx-cS7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drU-JU-oKk">
+                                <rect key="frame" x="41.5" y="533" width="331" height="89"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="SHINE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="shine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yto-XP-kmX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXa-cC-ufF">
+                                <rect key="frame" x="41.5" y="144.5" width="331" height="89"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="PULSE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pulse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Al5-W3-h0Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uAk-i1-oK8" firstAttribute="top" secondItem="lXa-cC-ufF" secondAttribute="bottom" constant="40" id="1al-sk-i0B"/>
+                            <constraint firstItem="lXa-cC-ufF" firstAttribute="width" secondItem="uAk-i1-oK8" secondAttribute="width" id="36S-c9-QDp"/>
+                            <constraint firstItem="lXa-cC-ufF" firstAttribute="height" secondItem="uAk-i1-oK8" secondAttribute="height" multiplier="0.994413" id="4qp-kD-Go3"/>
+                            <constraint firstItem="drU-JU-oKk" firstAttribute="top" secondItem="94X-9v-faf" secondAttribute="bottom" constant="40" id="693-E4-zWw"/>
+                            <constraint firstItem="94X-9v-faf" firstAttribute="top" secondItem="uAk-i1-oK8" secondAttribute="bottom" constant="40" id="Aj8-dh-RXM"/>
+                            <constraint firstItem="drU-JU-oKk" firstAttribute="width" secondItem="94X-9v-faf" secondAttribute="width" id="EVp-XN-vrX"/>
+                            <constraint firstItem="94X-9v-faf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="Jsq-u2-Mgu"/>
+                            <constraint firstItem="94X-9v-faf" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:10" id="Kmo-Tq-KMg"/>
+                            <constraint firstItem="drU-JU-oKk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QWr-PD-fau"/>
+                            <constraint firstItem="94X-9v-faf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bak-sq-mVE"/>
+                            <constraint firstItem="uAk-i1-oK8" firstAttribute="height" secondItem="94X-9v-faf" secondAttribute="height" id="cvH-HM-vHk"/>
+                            <constraint firstItem="uAk-i1-oK8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ewY-g4-lyJ"/>
+                            <constraint firstItem="94X-9v-faf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gJU-gI-R4z"/>
+                            <constraint firstItem="drU-JU-oKk" firstAttribute="height" secondItem="94X-9v-faf" secondAttribute="height" multiplier="0.994444" id="iZb-4B-YsE"/>
+                            <constraint firstItem="uAk-i1-oK8" firstAttribute="width" secondItem="94X-9v-faf" secondAttribute="width" id="kdS-nh-SfZ"/>
+                            <constraint firstItem="lXa-cC-ufF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uHZ-c6-kmj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="buttonsAnimated" destination="drU-JU-oKk" collectionClass="NSMutableArray" id="oez-y2-VkX"/>
+                        <outletCollection property="buttonsAnimated" destination="lXa-cC-ufF" collectionClass="NSMutableArray" id="Mh2-N7-PKh"/>
+                        <outletCollection property="buttonsAnimated" destination="uAk-i1-oK8" collectionClass="NSMutableArray" id="YiE-QU-0mw"/>
+                        <outletCollection property="buttonsAnimated" destination="94X-9v-faf" collectionClass="NSMutableArray" id="XxC-Et-9fZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="14" y="104"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
